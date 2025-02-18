@@ -1,5 +1,4 @@
 :host {
-  text-align: center;
 }
 
 nz-header,
@@ -9,7 +8,7 @@ nz-footer {
 }
 
 nz-footer {
-  bottom: 0;
+  position: relative;
   line-height: 1.5;
 }
 

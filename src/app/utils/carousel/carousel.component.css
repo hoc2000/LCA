@@ -1,0 +1,83 @@
+.color-test {
+  position: relative;
+  background: linear-gradient(
+    140deg,
+    color-mix(in srgb, oklch(69.02% 0.277 332.77), white 70%) 0%,
+    color-mix(in srgb, oklch(69.02% 0.277 332.77), white 70%) 15%,
+    color-mix(
+        in srgb,
+        color-mix(in srgb, oklch(69.02% 0.277 332.77), white 70%),
+        color-mix(in srgb, oklch(53.18% 0.28 296.97), white 70%) 50%
+      )
+      25%,
+    color-mix(
+        in srgb,
+        color-mix(in srgb, oklch(69.02% 0.277 332.77), white 70%),
+        color-mix(in srgb, oklch(53.18% 0.28 296.97), white 70%) 10%
+      )
+      35%,
+    color-mix(
+        in srgb,
+        color-mix(in srgb, oklch(69.02% 0.277 332.77), white 70%),
+        color-mix(in srgb, oklch(63.32% 0.24 31.68), white 60%) 50%
+      )
+      42%,
+    color-mix(
+        in srgb,
+        color-mix(in srgb, oklch(69.02% 0.277 332.77), white 70%),
+        color-mix(in srgb, oklch(63.32% 0.24 31.68), white 60%) 50%
+      )
+      44%,
+    color-mix(
+        in srgb,
+        color-mix(in srgb, oklch(69.02% 0.277 332.77), white 70%),
+        oklch(16.93% 0.004 285.95) 70%
+      )
+      47%,
+    color-mix(in srgb, oklch(53.18% 0.28 296.97), white 70%) 48%,
+    color-mix(in srgb, oklch(51.01% 0.274 263.83), white 60%) 60%
+  );
+  background-clip: text;
+  color: transparent;
+  transition: background-position 1.8sease-out;
+  animation: mymove 5s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 200px;
+  }
+}
+
+
+
+.full-thumbnail {
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: calc(.62 * 100%)
+}
+
+.full-thumbnail img {
+  height: auto;
+  position: absolute;
+  top: calc(50% + 1px);
+  left: calc(50% + 1px);
+  -webkit-transform: scale(1.01) translate(-50%, -50%);
+  transform: scale(1.01) translate(-50%, -50%);
+  display: block;
+  width: 100%;
+  max-height: none;
+  max-width: none;
+  -webkit-transition: -webkit-filter .3s;
+  transition: -webkit-filter .3s;
+  transition: filter .3s;
+  transition: filter .3s, -webkit-filter .3s
+}
